@@ -6,7 +6,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 // -Dkotlinx.coroutines.debug
-fun main() = runBlocking<Unit> {
+fun main() = runBlocking<Unit> { // 루트 Job 생성
     launch(CoroutineName("Coroutine1")) {
         launch(CoroutineName("Coroutine3")) {
             delay(100L)

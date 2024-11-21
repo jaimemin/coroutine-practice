@@ -8,6 +8,7 @@ import kotlinx.coroutines.runBlocking
 // -Dkotlinx.coroutines.debug
 fun main() = runBlocking<Unit> {
     val coroutineContext = newSingleThreadContext("MyThread") + CoroutineName("ParentCoroutine")
+
     launch(coroutineContext) {
         println("[${Thread.currentThread().name}] 부모 코루틴 실행")
 
